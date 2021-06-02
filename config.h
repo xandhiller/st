@@ -99,41 +99,24 @@ float alpha = 0.9;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"black",    /* black */
+    "#CC4444",  /* red       */ 
+    "#88CC88",  /* green     */ 
+    "#DDDD66",  /* yellow    */ 
+    "#6666CC",  /* blue      */ 
+    "#CC88CC",  /* magenta   */ 
+    "#559090",  /* cyan      */ 
+	"gray90",   /* grey (light) */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#ffffff",
-	"magenta",
-	"cyan",
-	"white",
-//   /* solarized light */
-//   "#000000",  /*  0: black    */
-//   "#dc322f",  /*  1: red      */
-//   "#859900",  /*  2: green    */
-//   "#b58900",  /*  3: yellow   */
-//   "#268bd2",  /*  4: blue     */
-//   "#d33682",  /*  5: magenta  */
-//   "#2aa198",  /*  6: cyan     */
-//   "#073642",  /*  7: white    */
-//   "#fdf6e3",  /*  8: brblack  */
-//   "#cb4b16",  /*  9: brred    */
-//   "#93a1a1",  /* 10: brgreen  */
-//   "#839496",  /* 11: bryellow */
-//   "#ffffff",  /* 12: brblue   */
-//   "#6c71c4",  /* 13: brmagenta*/
-//   "#586e75",  /* 14: brcyan   */
-//   "#002b36",  /* 15: brwhite  */
+	"gray50",    /* grey (dark) */
+    "#CC7777", /* light red */ 
+    "#AACCAA", /* light green */
+    "#DDDD99", /* light yellow */
+    "#9999CC", /* light blue */
+    "#CCAACC", /* light magenta */
+    "#99D0D0", /* light cyan */
+	"white",     /* white */
 
 	[255] = 0,
 
@@ -141,6 +124,9 @@ static const char *colorname[] = {
 	"#cccccc",
 	"#555555",
     "#ffffff",
+    "#222222",
+    "#444444",
+    "#666666",
 };
 
 
@@ -148,10 +134,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 12;
+unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 14;
+static unsigned int defaultcs = 8; 
+static unsigned int defaultrcs = 8;
 
 /*
  * Default shape of cursor
